@@ -5,7 +5,7 @@
   <groupId>com.springboot.poc</groupId>
   <artifactId>springboottel</artifactId>
   <packaging>war</packaging>
-
+<version>1.0</version>
   <name>springboottel</name>
   <url>http://maven.apache.org</url>
 
