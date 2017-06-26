@@ -1,4 +1,4 @@
-package com.springboot.poc.springboottel;
+package com.springboot.poc;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
