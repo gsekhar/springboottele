@@ -8,6 +8,8 @@ public class ServiceDeposit {
 	
 	private int numberofspreadinstallments;
 
+	private int servicedepositmaxamount;
+	
 	/**
 	 * @return the servicecategory
 	 */
@@ -48,6 +50,20 @@ public class ServiceDeposit {
 	 */
 	public void setNumberofspreadinstallments(int numberofspreadinstallments) {
 		this.numberofspreadinstallments = numberofspreadinstallments;
+	}
+
+	/**
+	 * @return the servicedepositmaxamount
+	 */
+	public int getServicedepositmaxamount() {
+		return servicedepositmaxamount;
+	}
+
+	/**
+	 * @param servicedepositmaxamount the servicedepositmaxamount to set
+	 */
+	public void setServicedepositmaxamount(int servicedepositmaxamount) {
+		this.servicedepositmaxamount = servicedepositmaxamount;
 	}
 	
 	

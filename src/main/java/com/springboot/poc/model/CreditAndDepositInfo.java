@@ -9,11 +9,11 @@ public class CreditAndDepositInfo {
 	
 	private String siteid;
 
-	private Set<ServiceDeposit> servicedep;
+	private Set<ServiceDeposit> servicedeposits;
 
 	private int servicedepositmaxamount;
 
-	private Set<EquipmentDeposits> equimentlist;
+	private Set<EquipmentDeposits> equimentdeposit;
 
 	private String creditchecktype;
 
@@ -21,8 +21,16 @@ public class CreditAndDepositInfo {
 
 	private String customerstatus;
 	
-
+	private String sitecode;
+	
+	private String accountnumber9;
+	
+	private boolean servicedepositspreadrequired;
+	
+	private boolean duenow;
+	
 	private Set<ExternalCreditCheckInfo> externalcreditcheckinfo;
+	
 
 	public String getSiteid() {
 		return siteid;
@@ -32,12 +40,19 @@ public class CreditAndDepositInfo {
 		this.siteid = siteid;
 	}
 
-	public Set<ServiceDeposit> getServicedep() {
-		return servicedep;
+
+	/**
+	 * @return the servicedeposits
+	 */
+	public Set<ServiceDeposit> getServicedeposits() {
+		return servicedeposits;
 	}
 
-	public void setServicedep(Set<ServiceDeposit> servicedep) {
-		this.servicedep = servicedep;
+	/**
+	 * @param servicedeposits the servicedeposits to set
+	 */
+	public void setServicedeposits(Set<ServiceDeposit> servicedeposits) {
+		this.servicedeposits = servicedeposits;
 	}
 
 	public int getServicedepositmaxamount() {
@@ -48,12 +63,20 @@ public class CreditAndDepositInfo {
 		this.servicedepositmaxamount = servicedepositmaxamount;
 	}
 
-	public Set<EquipmentDeposits> getEquimentlist() {
-		return equimentlist;
+	
+
+	/**
+	 * @return the equimentdeposit
+	 */
+	public Set<EquipmentDeposits> getEquimentdeposit() {
+		return equimentdeposit;
 	}
 
-	public void setEquimentlist(Set<EquipmentDeposits> equimentlist) {
-		this.equimentlist = equimentlist;
+	/**
+	 * @param equimentdeposit the equimentdeposit to set
+	 */
+	public void setEquimentdeposit(Set<EquipmentDeposits> equimentdeposit) {
+		this.equimentdeposit = equimentdeposit;
 	}
 
 	public String getCreditchecktype() {
@@ -86,6 +109,62 @@ public class CreditAndDepositInfo {
 
 	public void setExternalcreditcheckinfo(Set<ExternalCreditCheckInfo> externalcreditcheckinfo) {
 		this.externalcreditcheckinfo = externalcreditcheckinfo;
+	}
+
+	/**
+	 * @return the sitecode
+	 */
+	public String getSitecode() {
+		return sitecode;
+	}
+
+	/**
+	 * @param sitecode the sitecode to set
+	 */
+	public void setSitecode(String sitecode) {
+		this.sitecode = sitecode;
+	}
+
+	/**
+	 * @return the accountnumber9
+	 */
+	public String getAccountnumber9() {
+		return accountnumber9;
+	}
+
+	/**
+	 * @param accountnumber9 the accountnumber9 to set
+	 */
+	public void setAccountnumber9(String accountnumber9) {
+		this.accountnumber9 = accountnumber9;
+	}
+
+	/**
+	 * @return the servicedepositspreadrequired
+	 */
+	public boolean isServicedepositspreadrequired() {
+		return servicedepositspreadrequired;
+	}
+
+	/**
+	 * @param servicedepositspreadrequired the servicedepositspreadrequired to set
+	 */
+	public void setServicedepositspreadrequired(boolean servicedepositspreadrequired) {
+		this.servicedepositspreadrequired = servicedepositspreadrequired;
+	}
+
+	/**
+	 * @return the duenow
+	 */
+	public boolean isDuenow() {
+		return duenow;
+	}
+
+	/**
+	 * @param duenow the duenow to set
+	 */
+	public void setDuenow(boolean duenow) {
+		this.duenow = duenow;
 	}
 
 }
