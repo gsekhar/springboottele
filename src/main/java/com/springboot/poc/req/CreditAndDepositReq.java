@@ -9,5 +9,8 @@ package com.springboot.poc.req;
  */
 public class CreditAndDepositReq {
 
-	private String errormessage;
+//	private String errormessage;
+	
+	
+	
 }

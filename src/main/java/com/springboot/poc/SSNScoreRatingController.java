@@ -12,20 +12,18 @@ import com.springboot.poc.res.CreditAndDepositRes;
 
 @RestController
 @RequestMapping("/api/creditservice")
-public class SSNScoreRating {
+public class SSNScoreRatingController {
+
+	@RequestMapping("/")
+	public String index() {
+		return "Welcome to SSN score calculation!";
+	}
 
 	@RequestMapping(value = "/getcreditanddeposit", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
 	@ResponseBody
-	public CreditAndDepositRes getCreditAndDepositResponse(@RequestBody Depositinfo creditreq){
-		
-		return null;
+	public CreditAndDepositRes getCreditAndDepositResponse(@RequestBody Depositinfo creditreq) {
+		CreditAndDepositRes creditanddepositres = new CreditAndDepositRes();
+		return creditanddepositres;
 	}
-	
-	@RequestMapping("/")
-    public String index() {
-        return "Welcome to SSN score calculation!";
-    }
-	
 
-	
 }
