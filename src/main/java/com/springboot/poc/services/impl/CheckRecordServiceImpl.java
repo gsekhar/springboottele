@@ -15,12 +15,12 @@ import com.springboot.poc.services.CheckRecordService;
 @Service
 public class CheckRecordServiceImpl implements CheckRecordService {
 
-	private static String jsonFile = "/springboottel/src/main/java/mock.json";
+	private static String jsonFile = "src/main/resources/mock.json";
 
 	@Override
 	public CreditAndDepositRes getRecord(CreditAndDepositInfoReq creditanddepositinforeq) throws Exception {
 
-		JSONObject res =null;
+		CreditAndDepositRes creditanddepositresponse = null;
 		ObjectMapper mapper = new ObjectMapper();
 		FileReader reader = new FileReader(jsonFile);
 		JSONObject jsonObject = (JSONObject) new JSONParser().parse(reader);
@@ -34,16 +34,16 @@ public class CheckRecordServiceImpl implements CheckRecordService {
 										&& (req.get("firstname").equals(creditanddepositinforeq.getFirstname()))))) {
 					String s = key.toString();
 					String s1[] = s.split("request");
-					res = (JSONObject) jsonObject.get("response"+s1[1]);
+					JSONObject res = (JSONObject) jsonObject.get("response"+s1[1]);
 					String response = res.toString();
-					CreditAndDepositRes creditanddepositresponse = mapper.readValue(response, CreditAndDepositRes.class);
-					return creditanddepositresponse;
+					creditanddepositresponse = mapper.readValue(response, CreditAndDepositRes.class);
+					break;
 				}
 
 				
 			}
 		}
-		return null;
+		return creditanddepositresponse;
 		
 	}
 
