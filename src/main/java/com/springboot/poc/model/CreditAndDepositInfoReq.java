@@ -11,7 +11,7 @@ import java.util.Set;
  * @author gsekhar
  *
  */
-public class DummyCreditAndDepositInfo implements Serializable{
+public class CreditAndDepositInfoReq implements Serializable{
 
 	
 	private static final long serialVersionUID = 1L;
@@ -297,7 +297,7 @@ public class DummyCreditAndDepositInfo implements Serializable{
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		DummyCreditAndDepositInfo other = (DummyCreditAndDepositInfo) obj;
+		CreditAndDepositInfoReq other = (CreditAndDepositInfoReq) obj;
 		if (firstname == null) {
 			if (other.firstname != null)
 				return false;

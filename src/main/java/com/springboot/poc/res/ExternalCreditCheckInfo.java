@@ -1,11 +1,10 @@
 package com.springboot.poc.res;
 
-import java.util.Date;
 import java.util.Set;
 
 public class ExternalCreditCheckInfo {
 	
-	private Date creditinquirydatetime;
+	private String creditinquirydatetime;
 	
 	private String creditinquirystatus;
 	
@@ -32,11 +31,11 @@ public class ExternalCreditCheckInfo {
 	private Set<ReasonCodes> reasoncodes;
 	
 
-	public Date getCreditinquirydatetime() {
+	public String getCreditinquirydatetime() {
 		return creditinquirydatetime;
 	}
 
-	public void setCreditinquirydatetime(Date creditinquirydatetime) {
+	public void setCreditinquirydatetime(String creditinquirydatetime) {
 		this.creditinquirydatetime = creditinquirydatetime;
 	}
 

@@ -4,11 +4,8 @@
 package com.springboot.poc.res;
 
 import java.io.Serializable;
-import java.util.Set;
 
 import com.springboot.poc.model.CreditAndDepositInfo;
-import com.springboot.poc.model.EquipmentDeposits;
-import com.springboot.poc.model.ServiceDeposit;
 
 /**
  * @author gsekhar

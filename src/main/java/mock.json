@@ -1,10 +1,10 @@
 {
 "request1": {
-	"SiteId": "333",
-	"HouseNumber": "278566",
-	"FirstName": "Captain",
-	"LastName": "America",
-	"SocialSecurityNumber": "222348677"
+	"siteid": "333",
+	"housenumber": "278566",
+	"firstname": "Captain",
+	"lastname": "America",
+	"socialsecuritynumber": "222348677"
 },
 
 
