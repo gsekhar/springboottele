@@ -15,7 +15,7 @@ import com.springboot.poc.services.CheckRecordService;
 @Service
 public class CheckRecordServiceImpl implements CheckRecordService {
 
-	private static String jsonFile = "src/main/resources/mock.json";
+	private static String jsonFile = "mock.json";
 
 	@Override
 	public CreditAndDepositRes getRecord(CreditAndDepositInfoReq creditanddepositinforeq) throws Exception {
