@@ -1,7 +1,10 @@
 package com.springboot.poc.services.impl;
 
-import java.io.FileReader;
+import java.io.BufferedReader;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.util.Set;
+import java.util.stream.Collectors;
 
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
@@ -22,8 +25,12 @@ public class CheckRecordServiceImpl implements CheckRecordService {
 
 		CreditAndDepositRes creditanddepositresponse = null;
 		ObjectMapper mapper = new ObjectMapper();
-		FileReader reader = new FileReader(jsonFile);
-		JSONObject jsonObject = (JSONObject) new JSONParser().parse(reader);
+		InputStream is = this.getClass().getResourceAsStream(jsonFile);
+		String result = new BufferedReader(new InputStreamReader(is))
+				  .lines().collect(Collectors.joining("\n"));
+
+		//FileReader reader = new FileReader(jsonFile);
+		JSONObject jsonObject = (JSONObject) new JSONParser().parse(result);
 		Set keys = jsonObject.keySet();
 		for (Object key : keys) {
 			if (key.toString().contains("request")) {
