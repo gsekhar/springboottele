@@ -26,32 +26,31 @@ public class CheckRecordServiceImpl implements CheckRecordService {
 		CreditAndDepositRes creditanddepositresponse = null;
 		ObjectMapper mapper = new ObjectMapper();
 		InputStream is = this.getClass().getResourceAsStream(jsonFile);
-		String result = new BufferedReader(new InputStreamReader(is))
-				  .lines().collect(Collectors.joining("\n"));
+		String result = new BufferedReader(new InputStreamReader(is)).lines().collect(Collectors.joining("\n"));
 
-		//FileReader reader = new FileReader(jsonFile);
+		// FileReader reader = new FileReader(jsonFile);
 		JSONObject jsonObject = (JSONObject) new JSONParser().parse(result);
 		Set keys = jsonObject.keySet();
 		for (Object key : keys) {
 			if (key.toString().contains("request")) {
 				JSONObject req = (JSONObject) jsonObject.get(key);
-				if ((req.get("socialsecuritynumber").equals(creditanddepositinforeq.getSocialsecuritynumber()))
+				if ((req.get("siteid").equals(creditanddepositinforeq.getSiteid()))
+						&& (req.get("socialsecuritynumber").equals(creditanddepositinforeq.getSocialsecuritynumber()))
 						&& (req.get("housenumber").equals(creditanddepositinforeq.getHousenumber())
 								&& (req.get("lastname").equals(creditanddepositinforeq.getLastname())
 										&& (req.get("firstname").equals(creditanddepositinforeq.getFirstname()))))) {
 					String s = key.toString();
 					String s1[] = s.split("request");
-					JSONObject res = (JSONObject) jsonObject.get("response"+s1[1]);
+					JSONObject res = (JSONObject) jsonObject.get("response" + s1[1]);
 					String response = res.toString();
 					creditanddepositresponse = mapper.readValue(response, CreditAndDepositRes.class);
 					break;
 				}
 
-				
 			}
 		}
 		return creditanddepositresponse;
-		
+
 	}
 
 }
